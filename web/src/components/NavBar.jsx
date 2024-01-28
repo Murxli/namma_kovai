@@ -1,6 +1,7 @@
 import './NavBar.css'
 import Link from 'next/link';
 import Image from 'next/image';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const Navbar = () => {
     return (
@@ -11,13 +12,13 @@ const Navbar = () => {
                   href="/"
                   className="flex items-center"
               >
-                <Image src={"/logo.png"} alt="Namma Kovai logo"  width={400} height={100} className="max-w-16 md:max-w-36" priority/>
+                <Image src={"/tnlogo.png"} alt="Namma Kovai logo"  width={100} height={100} className="w-16" priority/>
+                <Image src={"/temp-logo.png"} alt="Namma Kovai logo"  width={200} height={200}  className=" w-48" priority/>
               </Link>
-              <ul className="nav-items">
-                {/* {navitems.map( item => <li className={`${active === item.path ? "clicked" : ""}`} key={item.name}><Link href={item.path}>{item.name}</Link></li>)} */}
-                <li>LSD</li>
-              </ul>
-              
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
             </nav>
         </div>
       </div>
