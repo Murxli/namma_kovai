@@ -72,8 +72,7 @@ export const createIssue = async (req,res) => {
       address, 
       area, 
       description, 
-      images_list, 
-      issue_status } = req.body;
+      images_list, } = req.body;
     const newIssue = new Issue({
       userId, 
       issue_type, 
@@ -84,7 +83,7 @@ export const createIssue = async (req,res) => {
       area, 
       description, 
       images_list, 
-      issue_status 
+      issue_status :'under review',
     })
 
     await newIssue.save();

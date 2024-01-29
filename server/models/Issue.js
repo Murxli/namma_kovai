@@ -8,12 +8,11 @@ const issueSchema = mongoose.Schema(
         },
         issue_type:{
             type: String,
-            enum: ['pothole', 'streetlight', 'wastedumps'],
             required: true,
         },
         department:{
             type:String,
-            enum: ['Municipality','Electricity','Road-Transport']
+            enum: ['Municipality','Electricity Board','Roadways']
         },
         name:{
             type:String,

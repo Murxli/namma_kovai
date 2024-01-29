@@ -10,11 +10,13 @@ import multer from 'multer';
 import multerS3 from "multer-s3";
 import AWS from 'aws-sdk';
 import { fileURLToPath } from "url";
-import { users, issues} from "./data/index.js";
+import { users, issues, infos} from "./data/index.js";
 import User from "./models/User.js"
 import Issue from "./models/Issue.js"
+import Info from "./models/Info.js"
 import issueRoutes from "./routes/issue.js"
 import userRoutes from "./routes/user.js"
+import infoRoutes from "./routes/info.js"
 import {createIssue} from "./controllers/issues.js"
 
 dotenv.config();
@@ -61,6 +63,7 @@ app.post("/multiple",upload.array("images",3),(req,res,next)=>{
 
 app.use("/issues",issueRoutes);
 app.use("/users",userRoutes);
+app.use("/infos",infoRoutes);
 
 const PORT = process.env.PORT || 6001;
 mongoose
@@ -71,5 +74,6 @@ mongoose
     /* ADD DATA ONE TIME */
     // User.insertMany(users);
     // Issue.insertMany(issues);
+    // Info.insertMany(infos);
     })
     .catch((error) => console.log(`${error} did not connect`));

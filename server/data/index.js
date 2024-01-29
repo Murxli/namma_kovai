@@ -15,6 +15,15 @@ const issueIds = [
   new mongoose.Types.ObjectId(),
 ];
 
+const infoIds = [
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+];
+
 export const users = [
   {
     _id: userIds[0],
@@ -112,6 +121,50 @@ export const issues = [
     issue_status: 'completed'
   },
 ];
+
+export const infos = [
+  {
+    _id:infoIds[0],
+    "info_title": "Municipal Waste Collection Schedule",
+    "info_dept": "Municipality",
+    "description": "Check the schedule for municipal waste collection in your area.",
+    "createdAt": "2022-02-01T10:00:00.000Z",
+    "updatedAt": "2022-02-01T10:00:00.000Z"
+  },
+  {
+    _id:infoIds[1],
+    "info_title": "Power Outage Notice",
+    "info_dept": "Electricity",
+    "description": "Due to maintenance, there will be a planned power outage in your area.",
+    "createdAt": "2022-02-05T15:30:00.000Z",
+    "updatedAt": "2022-02-05T15:30:00.000Z"
+  },
+  {
+    _id:infoIds[2],
+    "info_title": "Road Closure Alert",
+    "info_dept": "Road-Transport",
+    "description": "A section of Main Street will be closed for road construction starting next week.",
+    "createdAt": "2022-02-10T08:45:00.000Z",
+    "updatedAt": "2022-02-10T08:45:00.000Z"
+  },
+  {
+    _id:infoIds[3],
+    "info_title": "Public Park Renovation",
+    "info_dept": "Municipality",
+    "description": "The public park is undergoing renovation to improve facilities for the community.",
+    "createdAt": "2022-02-15T12:20:00.000Z",
+    "updatedAt": "2022-02-15T12:20:00.000Z"
+  },
+  {
+    _id:infoIds[4],
+    "info_title": "Traffic Advisory",
+    "info_dept": "Road-Transport",
+    "description": "Expect delays on Highway 101 due to ongoing roadwork. Please plan your route accordingly.",
+    "createdAt": "2022-02-20T17:10:00.000Z",
+    "updatedAt": "2022-02-20T17:10:00.000Z"
+  }
+]
+
 
 
 
