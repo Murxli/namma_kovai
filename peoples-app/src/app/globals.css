@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.max-container {
+  @apply max-w-7xl my-0 mx-auto
+}
+
+.forminput{
+  @apply bg-slate-50 py-4 px-6 placeholder:text-gray-400 text-black rounded-lg outline-none border-solid border-black border-[1px] font-medium
+}

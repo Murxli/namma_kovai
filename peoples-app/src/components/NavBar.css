@@ -1,0 +1,7 @@
+.navbar-container{
+    @apply w-full h-fit fixed flex justify-center z-20  top-0 left-0 px-2 sm:px-12
+}
+
+.navbar{
+    @apply p-4 flex place-items-center justify-between w-full font-medium text-lg max-w-7xl box-border transition-all 
+}
