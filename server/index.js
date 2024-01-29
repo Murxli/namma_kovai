@@ -14,6 +14,7 @@ import { users, issues} from "./data/index.js";
 import User from "./models/User.js"
 import Issue from "./models/Issue.js"
 import issueRoutes from "./routes/issue.js"
+import userRoutes from "./routes/user.js"
 import {createIssue} from "./controllers/issues.js"
 
 dotenv.config();
@@ -59,6 +60,7 @@ app.post("/multiple",upload.array("images",3),(req,res,next)=>{
 
 
 app.use("/issues",issueRoutes);
+app.use("/users",userRoutes);
 
 const PORT = process.env.PORT || 6001;
 mongoose
