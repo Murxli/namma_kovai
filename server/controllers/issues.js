@@ -23,9 +23,9 @@ export const getissues = async (req,res) => {
 
 export const getbyissuestatus= async (req,res) => {
     try{
-        const {issue_status} = req.params;
-        console.log(issue_status);
-        const issues = await Issue.find({issue_status})
+        const {department} = req.params;
+        console.log(department);
+        const issues = await Issue.find({department})
         res.status(200).json(issues);
     } catch (err) {
         res.status(404).json({message:err.message})

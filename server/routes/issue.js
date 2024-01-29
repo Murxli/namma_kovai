@@ -5,7 +5,7 @@ const router = express.Router();
 
 // get requests
 router.get("/",getissues);
-router.get("/:issue_status",getbyissuestatus);
+router.get("/:department",getbyissuestatus);
 
 
 //patch requests
