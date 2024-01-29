@@ -1,6 +1,6 @@
 const COLORS = {
-    primary: "#312651",
-    secondary: "#444262",
+    primary: "#08241a",
+    secondary: "#3db383",
     tertiary: "#FF7754",
   
     gray: "#83829A",
@@ -8,7 +8,21 @@ const COLORS = {
   
     white: "#F3F4F8",
     lightWhite: "#FAFAFC",
+
+    bg:"#e9f8f3"
   };
+
+  const DefaultTheme = {
+    dark: false,
+    colors: {
+      primary: 'rgb(0, 122, 255)',
+      background: 'rgb(242, 242, 242)',
+      card: 'rgb(255, 255, 255)',
+      text: 'rgb(28, 28, 30)',
+      border: 'rgb(216, 216, 216)',
+      notification: 'rgb(255, 59, 48)',
+    },
+};
   
   const FONT = {
     regular: "DMRegular",
@@ -48,4 +62,4 @@ const COLORS = {
     },
   };
   
-  export { COLORS, FONT, SIZES, SHADOWS };
+  export { COLORS, FONT, SIZES, SHADOWS, DefaultTheme };
