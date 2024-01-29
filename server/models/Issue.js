@@ -13,7 +13,7 @@ const issueSchema = mongoose.Schema(
         },
         department:{
             type:String,
-            enum: ['municipality','electricity','road']
+            enum: ['Municipality','Electricity','Road-Transport']
         },
         name:{
             type:String,
@@ -37,15 +37,16 @@ const issueSchema = mongoose.Schema(
             required:true,
         },
         images_list:{
-            type:[{imgURL:String}],
-            required:true,
+            type: Array,
+            default: [],
         },
         issue_status:{
             type: String,
             enum:['under review','work in progress','completed'],
             required:true
         }
-    }
+    },
+    { timestamps: true }
 );
 
 const Issue = mongoose.model("Issue",issueSchema);

@@ -1,13 +1,14 @@
 import express from 'express';
-import { getissues, getdeptissues, updateissuestatus} from '../controllers/issues.js';
+import { getissues, getbyissuestatus, updateissuestatus} from '../controllers/issues.js';
 
 const router = express.Router();
 
 // get requests
 router.get("/",getissues);
-router.get("/:department",getdeptissues);
+router.get("/:issue_status",getbyissuestatus);
+
 
 //patch requests
-router.patch("/:issueId/updatestatus",updateissuestatus)
+router.patch("/updatestatus/:issueId",updateissuestatus)
 
 export default router;
